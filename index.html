@@ -21,14 +21,15 @@
                 <select name="country" id="country" class="form-input"></select>
                 <label class="form-label hidden" for="state">State</label>
                 <select name="state" id="state" class="form-input hidden"></select>          
-                <button type="submit" class="mt-4 btn py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 py-2">Get Weather</button>
-              </form>
+                <button type="submit" class="mt-4 btn py-2.5 px-5 text-sm font-medium text-white focus:outline-none bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg border border-gray-200 hover:text-white focus:z-10 focus:ring-4 focus:ring-blue-200 dark:focus:ring-blue-800 dark:text-white dark:border-gray-600 py-2">Get Weather</button>
+                            </form>
             </div>
           </div>
 
           <div class="col-span-3 rounded-lg">
             <div id="current-weather" class="h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-white-100 dark:bg-white-800 dark:border-white-700 dark:hover:bg-white-700">
-              <h2>Current Weather</h2>
+              <h2 class="text-2xl font-extrabold" id="weather-selected"></h2>
+              <h2 class="text-xl font-extrabold" id="date"></h2>
               <p id="temperature"></p>
               <p id="humidity"></p>
               <p id="wind-speed"></p>
@@ -39,36 +40,40 @@
       <div class="col-span-1 rounded-lg">
         <div class="h-full max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-white-100 dark:bg-white-800 dark:border-white-700 dark:hover:bg-white-700">
           <div class="card-body" id="history"></div>
-          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-            </span>
+          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
+          </span>
           </button>
-          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-            </span>
+          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
+          </span>
           </button>
-          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-            </span>
+          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
+          </span>
           </button>
-          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-            </span>
+          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-500 to-pink-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
+          </span>
           </button>
-          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 group-hover:from-pink-500 group-hover:to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
-            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+          <button class="hidden block items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-pink-500 to-orange-400 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800">
+            <span class="relative px-5 py-2.5 transition-all ease-in duration-75 rounded-md group-hover:bg-opacity-0">
+            </span>
+        </button>
+        
             </span>
           </button>
         </div>
       </div>
 
-    <div class="col-span-3 rounded-lg">
-      <div id="forecast" class="h-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-white-100 dark:bg-white-800 dark:border-white-700 dark:hover:bg-white-700">
-        <h2>5-Day Forecast</h2>
-        <div id="forecast-data"></div>
-      </div>
+      <div id="forecast-data" class="grid w-full gap-6 grid-cols-5 col-span-3">
+        <div class="w-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 pl-4 mt-[6px]" id="forecast-day1"></div>
+        <div class="w-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 pl-4 mt-[6px]" id="forecast-day2"></div>
+        <div class="w-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 pl-4 mt-[6px]" id="forecast-day3"></div>
+        <div class="w-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 pl-4 mt-[6px]" id="forecast-day4"></div>
+        <div class="w-full bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 pl-4 mt-[6px]" id="forecast-day5"></div>
     </div>
-  </div>
+     
   
     <script src="config.js"></script>      
     <script src="./assets/js/script.js"></script>
