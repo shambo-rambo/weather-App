@@ -6,7 +6,9 @@ The Shambo-Rambo Weather App is a web application that allows users to check the
 
 Shambo-Rambo Weather App Screenshot
 
+![Screenshot of weather app](https://github.com/shambo-rambo/weather-App/blob/main/assets/images/weather%20dashboard%20screenshot.png)
 
+![Screenshot of weather app with forecast](https://github.com/shambo-rambo/weather-App/blob/main/assets/images/weather%20search%20screenshot.png)
 
 Features
 Current Weather Display: The app displays the current weather details for the selected city, including temperature, humidity, wind speed, and an icon representing the weather condition.
