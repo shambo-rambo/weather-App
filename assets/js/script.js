@@ -14,7 +14,7 @@ var cityNameTypedHandler = function (event) {
 };
 
 var getCity = function (city) {
-    var apiUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=2&appid=' + apikey;
+    var apiUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=2&appid=' + apikey;
 
     fetch(apiUrl)
     .then(function (response) {
