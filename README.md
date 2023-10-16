@@ -4,6 +4,9 @@ A user-friendly weather application to check current weather and 5-day forecasts
 Overview
 The Shambo-Rambo Weather App is a web application that allows users to check the current weather and 5-day weather forecast for different cities. This app runs in the browser and utilizes Tailwind CSS for styling and OpenWeatherMap API for fetching weather data.
 
+Application Link
+https://shambo-rambo.github.io/weather-App/
+
 Shambo-Rambo Weather App Screenshot
 
 ![Screenshot of weather app](https://github.com/shambo-rambo/weather-App/blob/main/assets/images/weather%20dashboard%20screenshot.png)
